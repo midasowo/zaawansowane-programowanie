@@ -1,4 +1,5 @@
-package obiektowe.proste;
+package obiektowe.proste.airport;
+
 
 public class Plane {
 
@@ -26,16 +27,25 @@ public class Plane {
     }
 
     public void load(int people) {
-        //spr czy nie za dużo
         usedSeats += people;
-        double totalPeopleWeight = 100*people;
+        double totalPeopleWeight = 100 * people;
         weightInKg += totalPeopleWeight;
     }
 
     public String toString() {
-        return "samolot, miasto: " + city + " waga: " + weightInKg
-                + "maks miejsca: " + maxSeats + " wykorzystane miejsca" + usedSeats;
+        int citySpaces = 10;
+        return String.format("samolot, miasto: %" + citySpaces + "s waga: %7.1f maks " +
+                        "miejsca: %5d wykorzystanie miejsca: %5d",
+                city, weightInKg, maxSeats, usedSeats);
     }
 
-
+    /*@Override
+    public String toString() {
+        return "Plane{" +
+                "city='" + city + '\'' +
+                ", weightInKg=" + weightInKg +
+                ", maxSeats=" + maxSeats +
+                ", usedSeats=" + usedSeats +
+                '}';
+    }*/
 }

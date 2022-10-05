@@ -1,4 +1,4 @@
-package obiektowe.proste;
+package obiektowe.proste.airport;
 
 import java.util.Random;
 
@@ -8,7 +8,7 @@ public class PlaneDemo {
 
         Random random = new Random();
 
-        Plane plane = new Plane("Warszawa", 33_000, 200);
+        Plane plane = new Plane("Warszawa", 33_000, 180);
         Plane plane2 = new Plane("Katowice", 33_000, 200);
         Plane plane3 = new Plane("Berlin", 33_000, 220);
 
