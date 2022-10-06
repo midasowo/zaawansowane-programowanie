@@ -8,6 +8,7 @@ public class Package {
     final String recipient;
     final int weightInGram;
     final boolean priority;
+    Status status = Status.CREATED;
 
 
     public Package(String sender, String recipient, int weightInGram) {
@@ -58,6 +59,7 @@ public class Package {
         return price;
     }
 
+
 //    return (weight > 0.5 && weight <= 1) ? 8 : (weight > 1 && weight <= 2) ? 12 : (weight > 2) ? (12.0 + (weight - 2.0)) : 5.0;
 
 
@@ -79,4 +81,12 @@ do 2 kg kosztuje 12 zł
                 ", price=" + getPrice() +
                 '}';
     }
+
+
+    /*
+    Konstruktor powinien skontrolować te wartości i wyświetlić błąd jeśli:
+    adresat lub nadawca nie został podany
+    waga nie mieści się w zakresie 1- 1000.*/
+
+
 }
