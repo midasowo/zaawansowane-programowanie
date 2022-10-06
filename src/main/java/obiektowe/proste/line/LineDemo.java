@@ -11,5 +11,7 @@ public class LineDemo {
 
         Rectangle rectangle = new Rectangle(line1,line2);
         rectangle.print();
+
+
     }
 }
