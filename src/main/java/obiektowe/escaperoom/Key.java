@@ -6,12 +6,9 @@ public class Key extends Item {
         super("Klucz");
     }
 
-    public boolean isKeyAvailable() {
-        return false;
+    @Override
+    public String use() {
+        return "Używam, klucza";
     }
 
-    @Override
-    public void use() {
-        System.out.println("Używam klucza");
-    }
 }

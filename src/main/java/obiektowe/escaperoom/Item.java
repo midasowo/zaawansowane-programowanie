@@ -8,11 +8,10 @@ public abstract class Item {
         this.name = name;
     }
 
-    public abstract void use();
+    public abstract String use();
 
     public String getName() {
         return name;
     }
-
 
 }

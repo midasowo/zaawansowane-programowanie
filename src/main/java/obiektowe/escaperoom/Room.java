@@ -7,7 +7,7 @@ public class Room {
 
     private List<Item> items = new ArrayList<>();
 
-    public Room(){
+    public Room() {
         items.add(new Door());
         items.add(new Window());
         items.add(new Key());
@@ -22,7 +22,6 @@ public class Room {
             if (item.getName().equalsIgnoreCase(name)) {
                 return item;
             }
-
         }
         throw new ItemNotFoundException();
     }

@@ -6,12 +6,8 @@ public class Door extends Item {
         super("Drzwi");
     }
 
-    public boolean isDoorOpen() {
-        return false;
-    }
-
     @Override
-    public void use() {
-        System.out.println("Używam drzwi");
+    public String use() {
+        return "Używam drzwi";
     }
 }

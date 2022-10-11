@@ -9,9 +9,6 @@ public class App {
         controller.startGame();
 
 
-
-
-
     }
 }
 

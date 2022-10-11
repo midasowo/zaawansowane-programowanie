@@ -11,8 +11,8 @@ public class Game {
         return room.getItems();
     }
 
-    public void useItem(String itemName) throws ItemNotFoundException {
+    public String useItem(String itemName) throws ItemNotFoundException {
         Item itemFound = room.findItemBy(itemName);
-        itemFound.use();  //polimorfizm w praktyce
+        return itemFound.use(); // polimorfizm w praktyce
     }
 }
