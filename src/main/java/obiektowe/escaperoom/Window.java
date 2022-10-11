@@ -9,7 +9,7 @@ public class Window extends Item {
     }
 
     @Override
-    public String use(Room room, Player player, Game game) {
+    public String use(UseContext context) {
 //        open = open ? false : true;
         /*if (open) {
             open = false;

@@ -15,7 +15,7 @@ public class Game {
 
     public String useItem(String itemName) throws ItemNotFoundException {
         Item itemFound = room.findItemBy(itemName);
-        return itemFound.use(room, player, this); // polimorfizm w praktyce
+        return itemFound.use(new UseContext(player, this, room)); // polimorfizm w praktyce
     }
 
     public boolean isGameRunning() {

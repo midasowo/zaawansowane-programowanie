@@ -9,9 +9,9 @@ public class Door extends Item {
     }
 
     @Override
-    public String use(Room room, Player player, Game game) {
-        if (player.hasItem(key)) {
-            game.endGame();
+    public String use(UseContext context) {
+        if (context.getPlayer().hasItem(key)) {
+            context.getGame().endGame();
             return "Drzwi się otwierają!";
         }
         return "Drzwi pozostają zamknięte, nie masz klucza!";
