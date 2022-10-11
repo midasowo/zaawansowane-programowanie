@@ -1,23 +1,21 @@
 package obiektowe.escaperoom;
 
 import java.util.List;
-import java.util.Scanner;
 
-//klasa do interakcji z aplikacją - wyświetla komunikaty, pozwala wprowadzać decyzje gracza do programu
-public class Controller {
+public abstract class Controller {
+    private Game game = new Game();
 
-    private Game game=new Game();
     public void startGame() {
-        System.out.println("Rozpoczynasz grę.");
-        System.out.println("Widzisz pokój z różnymi przedmiotami, z którymi możesz wchodzić w interakcję");
+        showMessage("Rozpoczynasz grę");
+        showMessage("Widzisz pokój z różnymi przedmiotami, z którymi możesz wchodzić w interakcję");
         repeatInteraction();
-        System.out.println("Gratulacje, rozwiązałeś zagadkę i wygrałeś!");
+        showMessage("Gratulacje, rozwiązałeś zagadkę i wygrałeś!");
     }
 
     private void repeatInteraction() {
-        do{
+        do {
             executeInteraction();
-        }while (game.isGameRunning());
+        } while (game.isGameRunning());
     }
 
     private void executeInteraction() {
@@ -27,25 +25,30 @@ public class Controller {
     }
 
     private void showItems() {
-        List<Item> items=  game.getItems();
+        List<Item> items = game.getItems();
+        String text = "";
         for (Item item : items) {
-            System.out.println(item.getName());
+            text += item.getName() + "\n";
         }
+        showMessage(text);
     }
 
     private String selectItem() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Wpisz nazwę przedmiotu, którego chcesz użyć: ");
-        return scanner.nextLine();
+        return readMessage("Wpisz nazwę przedmiotu, którego chcesz użyć: ");
     }
 
     private void useItem(String itemName) {
-        try{
+        try {
             String result = game.useItem(itemName);
-            System.out.println(result);
-            System.out.println("Przedmiot " + itemName + " aktywowany");
-        }catch (ItemNotFoundException e){
-            System.out.println("Nie znaleziono przedmiotu!");
+            showMessage(result);
+        } catch (ItemNotFoundException e) {
+            showMessage("Nie znaleziono przedmiotu!");
         }
     }
+
+    public abstract void showMessage(String message);
+
+    public abstract String readMessage(String question);
+
+
 }
