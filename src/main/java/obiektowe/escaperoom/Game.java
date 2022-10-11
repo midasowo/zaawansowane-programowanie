@@ -13,6 +13,6 @@ public class Game {
 
     public String useItem(String itemName) throws ItemNotFoundException {
         Item itemFound = room.findItemBy(itemName);
-        return itemFound.use(); // polimorfizm w praktyce
+        return itemFound.use(room); // polimorfizm w praktyce
     }
 }

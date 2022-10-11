@@ -7,7 +7,9 @@ public class Key extends Item {
     }
 
     @Override
-    public String use() {
+    public String use(Room room) {
+        //room.getItems().remove(this);
+        room.removeItem(this);
         return "Używam, klucza";
     }
 

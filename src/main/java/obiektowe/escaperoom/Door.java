@@ -7,7 +7,7 @@ public class Door extends Item {
     }
 
     @Override
-    public String use() {
+    public String use(Room room) {
         return "Używam drzwi";
     }
 }

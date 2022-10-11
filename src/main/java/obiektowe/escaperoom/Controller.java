@@ -11,15 +11,19 @@ public class Controller {
     public void startGame() {
         System.out.println("Rozpoczynasz grę.");
         System.out.println("Widzisz pokój z różnymi przedmiotami, z którymi możesz wchodzić w interakcję");
-        askForItems();
+        repeatInteraction();
     }
 
-    private void askForItems() {
+    private void repeatInteraction() {
         do {
-            showItems();
-            String itemName = selectItem();
-            useItem(itemName);
+            executeInteraction();
         } while (true);
+    }
+
+    private void executeInteraction() {
+        showItems();
+        String itemName = selectItem();
+        useItem(itemName);
     }
 
     private void showItems() {
