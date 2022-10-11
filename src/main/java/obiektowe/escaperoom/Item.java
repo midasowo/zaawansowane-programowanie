@@ -8,7 +8,7 @@ public abstract class Item {
         this.name = name;
     }
 
-    public abstract String use(Room room);
+    public abstract String use(Room room, Player player, Game game);
 
     public String getName() {
         return name;

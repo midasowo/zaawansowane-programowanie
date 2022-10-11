@@ -8,16 +8,17 @@ public class Room {
     private List<Item> items = new ArrayList<>();
 
     public Room() {
-        items.add(new Door());
+        Key key =new Key();
+        items.add(new Door(key));
         items.add(new Window());
-        items.add(new Key());
+        items.add(key);
     }
 
     public List<Item> getItems() {
         return new ArrayList<>(items);
     }
 
-    public Item findItemBy(String name) throws ItemNotFoundException {
+    public Item findItemBy(String name) throws ItemNotFoundException{
         for (Item item : items) {
             if (item.getName().equalsIgnoreCase(name)) {
                 return item;
@@ -25,6 +26,7 @@ public class Room {
         }
         throw new ItemNotFoundException();
     }
+
 
     public void removeItem(Item item) {
         items.remove(item);
