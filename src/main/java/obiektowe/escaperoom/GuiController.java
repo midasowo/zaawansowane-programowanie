@@ -1,8 +1,6 @@
 package obiektowe.escaperoom;
 
 import javax.swing.*;
-import java.util.List;
-import java.util.Scanner;
 
 public class GuiController extends Controller {
     @Override

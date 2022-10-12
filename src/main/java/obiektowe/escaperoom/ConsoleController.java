@@ -1,6 +1,5 @@
 package obiektowe.escaperoom;
 
-import java.util.List;
 import java.util.Scanner;
 
 //klasa do interakcji z aplikacją - wyświetla komunikaty, pozwala wprowadzać decyzje gracza do programu

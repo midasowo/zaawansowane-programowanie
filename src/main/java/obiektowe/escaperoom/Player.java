@@ -1,7 +1,5 @@
 package obiektowe.escaperoom;
 
-import obiektowe.proste.line.Line;
-
 import java.util.ArrayList;
 import java.util.List;
 
