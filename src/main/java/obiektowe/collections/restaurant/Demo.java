@@ -6,11 +6,11 @@ public class Demo {
 
         Restaurant restaurant = new Restaurant();
 
-        Dish dish1 = new Dish("Pierogi", 25, 600, DishType.DINNER);
+        Dish dish1 = new Dish("Pierogi", 25,600,DishType.DINNER);
         Dish dish2 = new Dish("Jajecznica", 15, 350, DishType.BREAKFAST);
         Dish dish3 = new Dish("Barszcz czerwony", 20, 300, DishType.APPETISER);
         Dish dish3b = new Dish("Rybna", 25, 350, DishType.APPETISER);
-        Dish dish4 = new Dish("Lody", 13, 400, DishType.DESSERT);
+        Dish dish4 = new Dish("Lody", 13, 400,DishType.DESSERT);
         Dish dish5 = new Dish("Lody", 13, 400, DishType.DESSERT);
 
         restaurant.add(dish1);
@@ -21,6 +21,8 @@ public class Demo {
         restaurant.add(dish5);
 
         System.out.println(restaurant);
+        System.out.println(restaurant.findDishBy("pierogi"));
+        System.out.println(restaurant.findDishesBy(DishType.APPETISER));
     }
 
     /*
