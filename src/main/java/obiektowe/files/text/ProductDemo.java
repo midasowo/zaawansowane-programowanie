@@ -1,4 +1,4 @@
-package obiektowe.files;
+package obiektowe.files.text;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -18,7 +18,7 @@ public class ProductDemo {
         System.out.println(products);
 
         try {
-            PrintWriter out = new PrintWriter("src/main/java/obiektowe/files/products.csv");
+            PrintWriter out = new PrintWriter("src/main/java/obiektowe/files/text/products.csv");
             out.println(product1.toCsv());
             out.println(product2.toCsv());
             out.close();

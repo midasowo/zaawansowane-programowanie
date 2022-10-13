@@ -1,4 +1,4 @@
-package obiektowe.files;
+package obiektowe.files.text;
 
 
 import java.io.FileNotFoundException;

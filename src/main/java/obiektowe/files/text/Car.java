@@ -1,4 +1,4 @@
-package obiektowe.files;
+package obiektowe.files.text;
 
 import java.util.Objects;
 
@@ -32,8 +32,8 @@ public class Car {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof obiektowe.files.Car)) return false;
-        obiektowe.files.Car car = (obiektowe.files.Car) o;
+        if (!(o instanceof Car)) return false;
+        Car car = (Car) o;
         return Double.compare(car.mileageInThousandKm, mileageInThousandKm) == 0 && Double.compare(car.capacity, capacity) == 0 && Objects.equals(brand, car.brand) && Objects.equals(model, car.model);
     }
 

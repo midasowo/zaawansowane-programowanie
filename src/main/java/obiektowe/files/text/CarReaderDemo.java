@@ -1,4 +1,4 @@
-package obiektowe.files;
+package obiektowe.files.text;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,7 +8,7 @@ public class CarReaderDemo {
 
     public static void main(String[] args) {
         try {
-            Scanner scanner = new Scanner(new File("src/main/java/obiektowe/files/car2.csv"));
+            Scanner scanner = new Scanner(new File("src/main/java/obiektowe/files/text/car2.csv"));
             String csvLine = scanner.nextLine();
             String[] csvElements = csvLine.split(";");
             String brand = csvElements[0];

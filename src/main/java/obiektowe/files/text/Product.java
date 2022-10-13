@@ -1,4 +1,4 @@
-package obiektowe.files;
+package obiektowe.files.text;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -29,7 +29,7 @@ public class Product {
 
     public List<String> readFromProducts() throws FileNotFoundException {
 
-        File file = new File("src/main/java/obiektowe/files/products.csv");
+        File file = new File("src/main/java/obiektowe/files/text/products.csv");
         List<String> products = new ArrayList<>();
         try {
             Scanner scanner = new Scanner(file);
