@@ -1,0 +1,1 @@
+model;marka;przebieg;pojemnosc

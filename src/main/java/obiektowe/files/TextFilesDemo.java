@@ -8,7 +8,7 @@ public class TextFilesDemo {
 
     public static void main(String[] args) {
         try {
-            PrintWriter out = new PrintWriter("cat.txt");  //przykładowe narzędzie do zapisu w pliku
+            PrintWriter out = new PrintWriter("car.txt");  //przykładowe narzędzie do zapisu w pliku
             String car = "passat 1.9 tdi 180 tys. km";
             out.println(car); //wydruk pliku
             out.println(car);
