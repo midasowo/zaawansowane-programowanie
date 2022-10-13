@@ -33,7 +33,12 @@ public class ProductDemo {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
-
     }
 }
+//    Stwórz obiekt Product z polami name(string), price(double) oraz amount(int).
+//        Przygotuj prosty serwis, który przyjmie listę produktów oraz zapisze je do pliku products.csv.
+//        Jedna linia pliku to jeden obiekt.
+//        Przygotuj metodę która odczyta z pliku zapisane linie i odtworzy z nich listę obiektów.
+
+
+
