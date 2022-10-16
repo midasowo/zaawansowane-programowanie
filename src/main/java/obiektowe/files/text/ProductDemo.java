@@ -17,12 +17,13 @@ public class ProductDemo {
 
         System.out.println(products);
 
-        product1.saveProduct(product1);
-//        product2.saveProduct(product2);
+        ProductRepository productManaging = new ProductRepository();
+        productManaging.saveProduct(product1);
+        productManaging.saveProduct(product2);
 
-        Product productsFromFile = new Product();
-        product1.readProducts(productsFromFile);
-//        product2.readProducts(productsFromFile);
+//        Product productsFromFile = new Product();
+//        productManaging.readProducts(product1);
+        productManaging.readProducts(product2);
     }
 }
 //    Stwórz obiekt Product z polami name(string), price(double) oraz amount(int).
